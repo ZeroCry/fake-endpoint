@@ -76,7 +76,7 @@ Todo request realizado a localhost:4567 sera recibido por el servidor web siguie
 }
 ```
 
-Las etiquetas <title> </title> y su contenido seran reemplazadas por el contenido del parametro con el mismo nombre, recibido en el request en caso no se reciba ningun parametro la etiqueta sera reemplazada por el valor por default contenido en la etiqueta, por ejemplo si el parametro title es igual a "hello world" el resultado sera
+Las etiquetas <title> </title> y su contenido seran reemplazadas por el contenido del parametro con el mismo nombre, recibido en el request en caso no se reciba ningun parametro la etiqueta sera reemplazada por el valor por default contenido en la etiqueta, por ejemplo si el parametro title es igual a "hello" el resultado sera
 
 **http://localhost:4567/v1/sample.json?title=hello**
 
