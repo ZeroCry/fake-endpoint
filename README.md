@@ -14,7 +14,11 @@ git clone https://github.com/joelibaceta/fake-endpoint.git
 
 ```
   cd fake-endpoint
+```
+```
   gem install bunlder
+```
+```
   bundle install
 ```
 ## iniciar el servidor
