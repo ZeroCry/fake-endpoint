@@ -1,5 +1,5 @@
 # fake-endpoint
-Aplicacion que permite simular un endpoint REST, mediante el uso de templates json
+Aplicacion que permite simular un endpoint REST, mediante el uso de templates json, usando Faker como generador de informacion falsa, ver [Faker(https://github.com/stympy/faker)] para conocer los metodos ruby disponibles para la generacion de contenido.
 
 
 ## configuracion inicial
@@ -49,64 +49,85 @@ Todo request realizado a localhost:4567 sera recibido por el servidor web siguie
 
   > Los archivos deben ser agregados en la carpeta raiz segun la ruta en la url pero en una estructura fisica de directorios.
 
-3. Los archivos son leidos y las etiquetas reemplazadas por los valores suministrados en el request, por ejemplo en el siguiente archivo JSON  **sample.json**
+3. Los archivos son leidos
+  - Las etiquetas reemplazadas por los valores suministrados en el request
+  - El texto encerrado en -- -- es evaluado por Ruby
+  
+  > Si el valor -- -- se encuentra dentro de una etiqueta el resultado de la evaluacion de codigo ruby solo sera visible cuando no se reciba un parametro de etiqueta.
+  > Es posible usar etiquetas dentro del codigo -- -- con el fin de recibir parametros para las funciones ruby de forma dinamica. 
+  
+  Por ejemplo en el siguiente archivo JSON  **sample.json**
 
-```html
-{
-    "glossary": {
-        "title": "<title>  </title>",
-        "GlossDiv": {
-            "title": "<sample> a Default value </sample>",
-            "GlossList": {
-                "GlossEntry": {
-                    "Title": "<title>  </title>",
-                    "SortAs": "SGML",
-                    "GlossTerm": "Standard Generalized Markup Language",
-                    "Acronym": "SGML",
-                    "Abbrev": "ISO 8879:1986",
-                    "GlossDef": {
-                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
-                        "GlossSeeAlso": ["GML", "XML"]
-                    },
-                    "GlossSee": "markup"
-                }
-            }
+  ```html
+  {
+      "glossary": {
+          "title": "<title>  </title>",
+          "author": "--Faker::Name.name--"
+          "GlossDiv": {
+              "title": "<sample> a Default value </sample>",
+              "GlossList": {
+                  "GlossEntry": {
+                      "Title": "<title>  </title>",
+                      "SortAs": "SGML",
+                      "GlossTerm": "Standard Generalized Markup Language",
+                      "Acronym": "SGML",
+                      "Abbrev": "ISO 8879:1986",
+                      "GlossDef": {
+                          "definition": "--Faker::Lorem.paragraph(<ndefpar>2</ndefpar>)--"
+                          "para": "A meta-markup language, used to create markup languages such as DocBook.",
+                          "GlossSeeAlso": ["GML", "XML"]
+                      },
+                      "GlossSee": "markup"
+                  }
+              }
+          }
+      }
+  }
+  ```
+
+ 
+  
+  Ejemplo: si el parametro title es igual a "hello" el resultado sera
+
+  **http://localhost:4567/v1/sample.json?title=hello&ndefpar=5**
+
+  ```json
+  {  
+     "glossary":{  
+        "title":"hello",
+        "author":"Hoyt Hagenes",
+        "GlossDiv":{  
+           "title":" a Default value ",
+           "GlossList":{  
+              "GlossEntry":{  
+                 "Title":"hello",
+                 "SortAs":"SGML",
+                 "GlossTerm":"Standard Generalized Markup Language",
+                 "Acronym":"SGML",
+                 "Abbrev":"ISO 8879:1986",
+                 "GlossDef":{  
+                    "definition":"Dolore maiores harum occaecati. Cumque consequatur dolor. Et doloribus et rerum. Soluta tempore voluptas quisquam explicabo deserunt enim architecto. Exercitationem aliquid doloremque est voluptates. Officiis totam sit sunt quis corrupti hic ea.",
+                    "para":"A meta-markup language, used to create markup languages such as DocBook.",
+                    "GlossSeeAlso":[  
+                       "GML",
+                       "XML"
+                    ]
+                 },
+                 "GlossSee":"markup"
+              }
+           }
         }
-    }
-}
-```
+     }
+  }
+  ```
 
-Las etiquetas <title> </title> y su contenido seran reemplazadas por el contenido del parametro con el mismo nombre, recibido en el request en caso no se reciba ningun parametro la etiqueta sera reemplazada por el valor por default contenido en la etiqueta, por ejemplo si el parametro title es igual a "hello" el resultado sera
+#### Que ha sucedido ?
 
-**http://localhost:4567/v1/sample.json?title=hello**
+- Las etiquetas <title> </title> han sido reemplazadas por el valor del parametro GET title
+- La etiqueta <sample> </sample> ha sido reemplazada por su valor por defecto al no encontrarse un parametro con un nuevo valor.
+- El codigo --Faker::Name.name-- es reemplazado por su valor luego de ser evaluado como codigo Ruby tomando como parametro el valor del parametro ndefpar recibido y reemplazado por la etiqueta <ndefpar></ndefpar>
 
-```html
-{
-    "glossary": {
-        "title": "hello",
-        "GlossDiv": {
-            "title": " a Default value ",
-            "GlossList": {
-                "GlossEntry": {
-                    "Title": "hello",
-                    "SortAs": "SGML",
-                    "GlossTerm": "Standard Generalized Markup Language",
-                    "Acronym": "SGML",
-                    "Abbrev": "ISO 8879:1986",
-                    "GlossDef": {
-                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
-                        "GlossSeeAlso": ["GML", "XML"]
-                    },
-                    "GlossSee": "markup"
-                }
-            }
-        }
-    }
-}
-```
-
-Las etiquetas <title> </title> han sido reemplazadas por el valor del parametro GET title  y la etiqueta <sample> </sample> ha sido reemplazada por su valor por defecto al no encontrarse un parametro con un nuevo valor.
-
+> Ver [Faker(https://github.com/stympy/faker)] para conocer los metodos ruby disponibles.
 
  
 ## rspec
