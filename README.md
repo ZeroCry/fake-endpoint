@@ -159,6 +159,14 @@ La llamada a **http://localhost:4567/v1/sample.json?custom-title=narnia**, dara 
 } 
 ```
 
+La llamada a **http://localhost:4567/v1/sample.json?custom-title=narnia&title=the-hobbit**, dara como resultado : 
+
+```json
+{
+  "title": "the-hobit",
+  "title-upcase": "narnia"
+} 
+```
 
 ## rspec
 
