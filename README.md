@@ -40,9 +40,10 @@ Todo request realizado a localhost:4567 sera recibido por el servidor web siguie
 
 1. Recibir request (GET / POST) y parsear url para obtener ruta y parametros 
 2. Con la ruta se busca de forma local el archivo json de respuesta por ejemplo, para un request a /v1/sample.json se buscara localmente un archivo sample.json en la carpeta v1 bajo el directorio base.
-![GitHub Logo](/doc/json_dir.png)
-Format: ![Alt Text](url)
+![GitHub Logo](/doc/json_dir.png) 
+
 > Los archivos deben ser agregados en la carpeta raiz segun la ruta en la url pero en una estructura fisica de directorios.
+
 3. Los archivos son leidos y las etiquetas reemplazadas por los valores suministrados en el request, por ejemplo en el siguiente archivo JSON 
 
 ```
