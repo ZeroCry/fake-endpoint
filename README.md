@@ -59,7 +59,7 @@ Todo request realizado a localhost:4567 sera recibido por el servidor web siguie
             "title": "<sample> a Default value </sample>",
             "GlossList": {
                 "GlossEntry": {
-                    "Title": "<title>  </title>",
+                    "Title": "**<title>  </title>**",
                     "SortAs": "SGML",
                     "GlossTerm": "Standard Generalized Markup Language",
                     "Acronym": "SGML",
