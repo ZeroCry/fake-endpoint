@@ -51,8 +51,8 @@ Todo request realizado a localhost:4567 sera recibido por el servidor web siguie
   > Los archivos deben ser agregados en la carpeta raiz segun la ruta en la url pero en una estructura fisica de directorios.
 
 3. Los archivos son leidos
-  - Las etiquetas reemplazadas por los valores suministrados en el request
-  - El texto encerrado en -- -- es evaluado por Ruby
+  -Las etiquetas reemplazadas por los valores suministrados en el request
+  -El texto encerrado en -- -- es evaluado por Ruby
    
   Por ejemplo en el siguiente archivo JSON  **sample.json**
 
