@@ -109,3 +109,27 @@ Las etiquetas <title> </title> han sido reemplazadas por el valor del parametro 
 
 
  
+## rspec
+
+Para usar este snippet con rspec es necesario agregar al Gemfile
+
+```
+gem 'webmock', require: false
+```
+
+Insertar el codigo de app.rb en una clase que herede de Sinatra::Base
+
+class FakeEndpoint < Sinatra::Base
+  ## El codigo va aqui
+end
+  
+  
+Y agregar la configuracion 
+
+RSpec.configure do |config| 
+
+  config.before(:each) do
+    stub_request(:any, /www.la_url_de_tu_endpoint/).to_rack(FakeEndpoint)
+  end
+
+end
