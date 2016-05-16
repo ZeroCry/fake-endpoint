@@ -12,8 +12,7 @@ get '*' do
 end
 
 post '*' do 
-  uri = URI.parse(request.env["REQUEST_URI"]) 
-  
+  uri = URI.parse(request.env["REQUEST_URI"])  
   json_response_as_string = File.read("#{Dir.getwd}#{uri.path}")
   request.params.each do |k, v|
     reg_exp_match = "<TAG*>(.*?)</TAG>".gsub("TAG", k)   
