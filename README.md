@@ -113,13 +113,13 @@ Las etiquetas <title> </title> han sido reemplazadas por el valor del parametro 
 
 Para usar este snippet con rspec es necesario agregar al Gemfile
 
-```
+```ruby
 gem 'webmock', require: false
 ```
 
 Insertar el codigo de app.rb en una clase que herede de Sinatra::Base
 
-```
+```ruby
 class FakeEndpoint < Sinatra::Base
   ## El codigo va aqui
 end
@@ -127,7 +127,7 @@ end
   
 Y agregar la configuracion 
 
-```
+```ruby
 RSpec.configure do |config| 
 
   config.before(:each) do
