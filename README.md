@@ -105,7 +105,7 @@ Las etiquetas <title> </title> y su contenido seran reemplazadas por el contenid
 }
 ```
 
-
+Las etiquetas <title> </title> han sido reemplazadas por el valor del parametro GET title  y la etiqueta <sample> </sample> ha sido reemplazada por su valor por defecto al no encontrarse un parametro con un nuevo valor.
 
 
  
