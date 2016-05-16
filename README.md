@@ -129,7 +129,29 @@ Todo request realizado a localhost:4567 sera recibido por el servidor web siguie
 
 > Ver [Faker](https://github.com/stympy/faker) para conocer los metodos ruby disponibles.
 
- 
+
+### Ejemplos
+
+Para este archivo json 
+
+```html
+{
+  "title": "<title>  <title>",
+  "title-upcase": "-- params[:title].to_s.upcase --"
+} 
+```
+
+La llamada a **http://localhost:4567/v1/sample.json?title=narnia**, dara como resultado : 
+
+```json
+{
+  "title": "narnia",
+  "title-upcase": "NARNIA"
+} 
+```
+
+
+
 ## rspec
 
 Para usar este snippet con rspec es necesario agregar al Gemfile
