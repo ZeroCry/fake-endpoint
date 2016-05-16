@@ -51,7 +51,7 @@ Todo request realizado a localhost:4567 sera recibido por el servidor web siguie
 
 3. Los archivos son leidos y las etiquetas reemplazadas por los valores suministrados en el request, por ejemplo en el siguiente archivo JSON  **sample.json**
 
-```json
+```html
 {
     "glossary": {
         "title": "<title>  </title>",
@@ -59,7 +59,7 @@ Todo request realizado a localhost:4567 sera recibido por el servidor web siguie
             "title": "<sample> a Default value </sample>",
             "GlossList": {
                 "GlossEntry": {
-                    "Title": "**<title>  </title>**",
+                    "Title": "<title>  </title>",
                     "SortAs": "SGML",
                     "GlossTerm": "Standard Generalized Markup Language",
                     "Acronym": "SGML",
@@ -80,7 +80,7 @@ Las etiquetas <title> </title> y su contenido seran reemplazadas por el contenid
 
 **http://localhost:4567/v1/sample.json?title=hello**
 
-```json
+```html
 {
     "glossary": {
         "title": "hello",
