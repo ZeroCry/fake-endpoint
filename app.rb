@@ -7,6 +7,7 @@ get '*' do
   uri = URI.parse(request.env["REQUEST_URI"]) 
   json_response_as_string = File.read("#{Dir.getwd}#{uri.path}")
   json_response = parse_json_template(uri.query, json_response_as_string)
+  json_response.gsub!(/<(.*?)*>/, '')  
   return  json_response
 end
 
