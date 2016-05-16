@@ -1,5 +1,5 @@
 # fake-endpoint
-Aplicacion que permite simular un endpoint REST, mediante el uso de templates json, usando Faker como generador de informacion falsa, ver [Faker(https://github.com/stympy/faker)] para conocer los metodos ruby disponibles para la generacion de contenido.
+Aplicacion que permite simular un endpoint REST, mediante el uso de templates json, usando Faker como generador de informacion falsa, ver [Faker](https://github.com/stympy/faker) para conocer los metodos ruby disponibles para la generacion de contenido.
 
 
 ## configuracion inicial
@@ -127,7 +127,7 @@ Todo request realizado a localhost:4567 sera recibido por el servidor web siguie
 - La etiqueta `<sample> </sample>` ha sido reemplazada por su valor por defecto al no encontrarse un parametro con un nuevo valor.
 - El codigo **--Faker::Name.name--** es reemplazado por su valor luego de ser evaluado como codigo Ruby tomando como parametro el valor del parametro ndefpar recibido y reemplazado por la etiqueta `<ndefpar></ndefpar>`
 
-> Ver [Faker(https://github.com/stympy/faker)] para conocer los metodos ruby disponibles.
+> Ver [Faker](https://github.com/stympy/faker) para conocer los metodos ruby disponibles.
 
  
 ## rspec
