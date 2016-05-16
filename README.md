@@ -136,8 +136,8 @@ Para este archivo json
 
 ```html
 {
-  "title": "<title>  <title>",
-  "title-upcase": "-- params[:title].to_s.upcase --"
+  "title": "<title> -- Faker.Faker::Book.title -- <title>",
+  "title-upcase": "<custom-title>-- params[:title].to_s.upcase --<custom-title>"
 } 
 ```
 
@@ -150,6 +150,14 @@ La llamada a **http://localhost:4567/v1/sample.json?title=narnia**, dara como re
 } 
 ```
 
+La llamada a **http://localhost:4567/v1/sample.json?custom-title=narnia**, dara como resultado : 
+
+```json
+{
+  "title": "The Odd Sister",
+  "title-upcase": "narnia"
+} 
+```
 
 
 ## rspec
