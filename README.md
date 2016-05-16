@@ -6,24 +6,24 @@ Aplicacion que permite simular un endpoint REST, mediante el uso de templates js
 
 ### Clonar el proyecto
 
-```
+```bash
 git clone https://github.com/joelibaceta/fake-endpoint.git
 ```
 
 ### Instalar dependencias
 
-```
+```bash
   cd fake-endpoint
 ```
-```
+```bash
   gem install bunlder
 ```
-```
+```bash
   bundle install
 ```
 ## iniciar el servidor
 
-```
+```bash
   ruby app.rb
 ```
 Cuando se vea el mensaje 
