@@ -17,6 +17,7 @@ post '*' do
     reg_exp_match = "<TAG*>(.*?)</TAG>".gsub("TAG", k)   
     json_response_as_string.gsub!(%r[#{reg_exp_match}], v.to_s)  
   end
+  json_response_as_string.gsub!(/<(.*?)*>/, '')  
   return  json_response_as_string
 end
 
