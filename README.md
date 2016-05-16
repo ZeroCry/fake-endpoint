@@ -53,6 +53,7 @@ Todo request realizado a localhost:4567 sera recibido por el servidor web siguie
 3. Los archivos son leidos
   - Las etiquetas reemplazadas por los valores suministrados en el request
   - El texto encerrado en -- -- es evaluado por Ruby
+   
 
   > Si el valor -- -- se encuentra dentro de una etiqueta el resultado de la evaluacion de codigo ruby solo sera visible cuando no se reciba un parametro de etiqueta.
   > Es posible usar etiquetas dentro del codigo -- -- con el fin de recibir parametros para las funciones ruby de forma dinamica. 
