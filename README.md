@@ -28,8 +28,6 @@ git clone https://github.com/joelibaceta/fake-endpoint.git
 ```
 Cuando se vea el mensaje 
 
-**http://localhost:4567/v1/sample.json?title=hello**
-
 ```
 [2016-05-16 13:10:21] INFO  WEBrick 1.3.1
 [2016-05-16 13:10:21] INFO  ruby 2.3.1 (2016-04-26) [x86_64-darwin15]
@@ -80,15 +78,17 @@ Todo request realizado a localhost:4567 sera recibido por el servidor web siguie
 
 Las etiquetas <title> </title> y su contenido seran reemplazadas por el contenido del parametro con el mismo nombre, recibido en el request en caso no se reciba ningun parametro la etiqueta sera reemplazada por el valor por default contenido en la etiqueta, por ejemplo si el parametro title es igual a "hello world" el resultado sera
 
+**http://localhost:4567/v1/sample.json?title=hello**
+
 ```
 {
     "glossary": {
-        "title": "hello world",
+        "title": "hello",
         "GlossDiv": {
             "title": "a  Default value",
             "GlossList": {
                 "GlossEntry": {
-                    "Title": "hello world",
+                    "Title": "hello",
                     "SortAs": "SGML",
                     "GlossTerm": "Standard Generalized Markup Language",
                     "Acronym": "SGML",
