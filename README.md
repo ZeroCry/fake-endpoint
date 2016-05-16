@@ -123,9 +123,9 @@ Todo request realizado a localhost:4567 sera recibido por el servidor web siguie
 
 #### Que ha sucedido ?
 
-- Las etiquetas <title> </title> han sido reemplazadas por el valor del parametro GET title
-- La etiqueta <sample> </sample> ha sido reemplazada por su valor por defecto al no encontrarse un parametro con un nuevo valor.
-- El codigo --Faker::Name.name-- es reemplazado por su valor luego de ser evaluado como codigo Ruby tomando como parametro el valor del parametro ndefpar recibido y reemplazado por la etiqueta <ndefpar></ndefpar>
+- Las etiquetas `<title> </title>` han sido reemplazadas por el valor del parametro GET title
+- La etiqueta `<sample> </sample>` ha sido reemplazada por su valor por defecto al no encontrarse un parametro con un nuevo valor.
+- El codigo --Faker::Name.name-- es reemplazado por su valor luego de ser evaluado como codigo Ruby tomando como parametro el valor del parametro ndefpar recibido y reemplazado por la etiqueta `<ndefpar></ndefpar>`
 
 > Ver [Faker(https://github.com/stympy/faker)] para conocer los metodos ruby disponibles.
 
