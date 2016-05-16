@@ -119,10 +119,11 @@ gem 'webmock', require: false
 
 Insertar el codigo de app.rb en una clase que herede de Sinatra::Base
 
+```
 class FakeEndpoint < Sinatra::Base
   ## El codigo va aqui
 end
-  
+```
   
 Y agregar la configuracion 
 
