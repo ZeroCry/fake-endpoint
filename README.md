@@ -28,6 +28,8 @@ git clone https://github.com/joelibaceta/fake-endpoint.git
 ```
 Cuando se vea el mensaje 
 
+**http://localhost:4567/v1/sample.json?title=hello**
+
 ```
 [2016-05-16 13:10:21] INFO  WEBrick 1.3.1
 [2016-05-16 13:10:21] INFO  ruby 2.3.1 (2016-04-26) [x86_64-darwin15]
