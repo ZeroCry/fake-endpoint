@@ -137,7 +137,7 @@ Para este archivo json
 ```html
 {
   "title": "<title> -- Faker.Faker::Book.title -- <title>",
-  "title-upcase": "<custom-title>-- params[:title].to_s.upcase --<custom-title>"
+  "title-upcase": "<customtitle>-- params[:title].to_s.upcase --<customtitle>"
 } 
 ```
 
@@ -150,7 +150,7 @@ La llamada a **http://localhost:4567/v1/sample.json?title=narnia**, dara como re
 } 
 ```
 
-La llamada a **http://localhost:4567/v1/sample.json?custom-title=narnia**, dara como resultado : 
+La llamada a **http://localhost:4567/v1/sample.json?customtitle=narnia**, dara como resultado : 
 
 ```json
 {
@@ -159,7 +159,7 @@ La llamada a **http://localhost:4567/v1/sample.json?custom-title=narnia**, dara 
 } 
 ```
 
-La llamada a **http://localhost:4567/v1/sample.json?custom-title=narnia&title=the-hobbit**, dara como resultado : 
+La llamada a **http://localhost:4567/v1/sample.json?customtitle=narnia&title=the-hobbit**, dara como resultado : 
 
 ```json
 {
