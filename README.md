@@ -132,7 +132,7 @@ Todo request realizado a localhost:4567 sera recibido por el servidor web siguie
 
 ### Ejemplos
 
-Para este archivo json 
+Para el archivo /v1/sample.json 
 
 ```html
 {
