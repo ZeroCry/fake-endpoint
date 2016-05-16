@@ -127,6 +127,7 @@ end
   
 Y agregar la configuracion 
 
+```
 RSpec.configure do |config| 
 
   config.before(:each) do
@@ -134,3 +135,4 @@ RSpec.configure do |config|
   end
 
 end
+```
