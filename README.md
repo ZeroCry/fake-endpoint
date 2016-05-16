@@ -51,7 +51,7 @@ Todo request realizado a localhost:4567 sera recibido por el servidor web siguie
 
 3. Los archivos son leidos y las etiquetas reemplazadas por los valores suministrados en el request, por ejemplo en el siguiente archivo JSON  **sample.json**
 
-```
+```json
 {
     "glossary": {
         "title": "<title>  </title>",
@@ -80,7 +80,7 @@ Las etiquetas <title> </title> y su contenido seran reemplazadas por el contenid
 
 **http://localhost:4567/v1/sample.json?title=hello**
 
-```
+```json
 {
     "glossary": {
         "title": "hello",
