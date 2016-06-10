@@ -2,6 +2,10 @@ require 'sinatra'
 require 'uri'
 require 'json'
 require 'faker'
+require_relative 'helpers'
+
+include Helper
+ 
 
 get '*' do
   uri = URI.parse(request.env["REQUEST_URI"]) 
@@ -20,7 +24,7 @@ post '*' do
     json_response_as_string.gsub!(%r[#{reg_exp_match}], v.to_s)  
   end
   json_response_as_string.gsub!(/<(.*?)*>/, '')
-  json_response.gsub!(/--(.*?)--/, ''){|ruby_code| eval(ruby_code.gsub("--", "")).to_s}
+  json_response_as_string.gsub!(/--(.*?)--/){|ruby_code| eval(ruby_code.gsub("--", "")).to_s}
   
   return  json_response_as_string
 end
