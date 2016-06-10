@@ -1,0 +1,44 @@
+{
+    "collector_id": 150216849,
+    "operation_type": "regular_payment",
+    "items": [
+        {
+            "id": "",
+            "title": "Remera Gabba Gabba Hey",
+            "description": "",
+            "category_id": "",
+            "picture_url": "http://theventan.com/wp-content/uploads/2012/03/ramones-shirt.jpg",
+            "currency_id": "ARS",
+            "quantity": 1,
+            "unit_price": 150
+        }
+    ],
+    "payer": {
+        "name": "Test",
+        "surname": "Payer Mla",
+        "email": "heyho@sarasa.com",
+    },
+    "payment_methods": {
+        "excluded_payment_methods": [
+            {
+                "id": ""
+            }
+        ],
+        "excluded_payment_types": [
+            {
+                "id": ""
+            }
+        ],
+        "installments": 6,
+        "default_payment_method_id": null,
+        "default_installments": null
+    },
+    "client_id": "963",
+    "marketplace": "NONE",
+    "marketplace_fee": 0,
+    "expires": false,
+    "date_created": "2016-06-09T21:54:38.242-04:00",
+    "id": "150216849-12f6667e-8f70-48df-8b98-dd85013c3f41",
+    "init_point": "https://www.mercadopago.com/mla/checkout/start?pref_id=150216849-8f0b1edc-95b4-4321-9d61-6848f0282aad",
+    "sandbox_init_point": "https://sandbox.mercadopago.com/mla/checkout/pay?pref_id=150216849-8f0b1edc-95b4-4321-9d61-6848f0282aad"
+}
