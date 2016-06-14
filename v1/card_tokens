@@ -1,0 +1,25 @@
+{
+  "id": "--Helper::generate_card_token--",
+  "public_key": "<public_key></public_key>",
+  "card_id": null,
+  "first_six_digits": null,
+  "luhn_validation": null,
+  "date_used": null,
+  "status": "active",
+  "date_due": "2016-06-18T10:36:31.817-04:00",
+  "live_mode": true,
+  "card_number_length": null, 
+  "security_code_length": "",
+  "expiration_year": "<cardExpirationYear></cardExpirationYear>",
+  "expiration_month": "<cardExpirationMonth></cardExpirationMonth>",
+  "date_last_updated": "2016-06-10T10:36:31.816-04:00",
+  "last_four_digits": null,
+  "cardholder": {
+    "identification": {
+      "number": null,
+      "type": null
+    },
+    "name": null
+  },
+  "date_created": "2016-06-10T10:36:31.816-04:00"
+}

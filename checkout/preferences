@@ -1,0 +1,78 @@
+{
+  "additional_info": "",
+  "auto_return": "",
+  "back_urls": {
+    "failure": "",
+    "pending": "",
+    "success": ""
+  },
+  "client_id": "963",
+  "collector_id": 150216849,
+  "date_created": "2016-06-14T14:54:48.094-04:00",
+  "expiration_date_from": null,
+  "expiration_date_to": null,
+  "expires": false,
+  "external_reference": "",
+  "id": "150216849-eb3d1fda-222d-466c-a871-b9b4a5a2c80a",
+  "init_point": "https://www.mercadopago.com/mla/checkout/start?pref_id=150216849-eb3d1fda-222d-466c-a871-b9b4a5a2c80a",
+  "items": [
+    {
+      "id": "",
+      "currency_id": "ARS",
+      "title": "DS 507PW",
+      "picture_url": "https://lh6.ggpht.com/5t517DKU2s7VT2W4bxXvCbxGGFnq2JMvjejEyfNUf3ocihuOMiCkPG8-tcd5oKJccaON=w64",
+      "description": "",
+      "category_id": "",
+      "quantity": 1,
+      "unit_price": 10500
+    }
+  ],
+  "marketplace": "NONE",
+  "marketplace_fee": 0,
+  "notification_url": null,
+  "operation_type": "regular_payment",
+  "payer": {
+    "phone": {
+      "area_code": "",
+      "number": ""
+    },
+    "address": {
+      "zip_code": "",
+      "street_name": "",
+      "street_number": null
+    },
+    "email": "ignacio.orona@gmail.com",
+    "identification": {
+      "number": "",
+      "type": ""
+    },
+    "name": "Ignacio",
+    "surname": "Orona",
+    "date_created": ""
+  },
+  "payment_methods": {
+    "excluded_payment_methods": [
+      {
+        "id": ""
+      }
+    ],
+    "default_installments": null,
+    "default_payment_method_id": null,
+    "excluded_payment_types": [
+      {
+        "id": ""
+      }
+    ],
+    "installments": 3
+  },
+  "sandbox_init_point": "https://sandbox.mercadopago.com/mla/checkout/pay?pref_id=150216849-eb3d1fda-222d-466c-a871-b9b4a5a2c80a",
+  "shipments": {
+    "receiver_address": {
+      "floor": "",
+      "zip_code": "",
+      "street_name": "",
+      "apartment": "",
+      "street_number": null
+    }
+  }
+}
